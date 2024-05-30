@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceh8rjm6r440a"]
+
+[ext_resource type="Texture2D" uid="uid://b4lpfphoplqcg" path="res://cart.png" id="1_ftni0"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_1526j"]
+[ext_resource type="Script" path="res://Label.gd" id="3_ptlly"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(542, 296)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13, 10)
+texture = ExtResource("1_ftni0")
+script = ExtResource("2_1526j")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -45.0
+offset_top = -286.0
+offset_right = 62.0
+offset_bottom = -263.0
+text = "Andrew Sinha"
+script = ExtResource("3_ptlly")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -541.0
+offset_top = -294.0
+offset_right = -293.0
+offset_bottom = -115.0
+text = "Press Thee Button"
+
+[connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
